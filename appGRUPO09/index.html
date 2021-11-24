@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<title>GRUPO09PARCIAL2TPI</title>
+	<meta charset="utf-8"  />
+<LINK REL=StyleSheet HREF="css/estilo.css" TYPE="text/css" MEDIA=screen>
+<script src="js/codigo.js"></script>
+
+</head>
+
+<body onload="obtenerProductos();">
+ <h1>Parcial 2 Grupo 09</h1>
+     <p>… Sus datos personales aquí …</p>
+	 <p><button id="inventario" onclick="obtenerProductos();this.style.display='none';">Obtener Productos</button> </p>
+	 <div id="listado" style="display:none;">
+	 <form name="filtroprods" id="filtroprods">
+	   Seleccione Categorias 
+	   <input type="checkbox" id="c1" value="c1" checked>Deportiva
+	 <input type="checkbox" id="c2" value="c2" checked>Minimoto
+   <input type="checkbox" id="c3" value="c3" checked>Motoneta
+   <input type="checkbox" id="c4" value="c4" checked>Motocarro
+   <ol><li>Click en la imagen para Acercamiento</li>
+   <li>Click en precio para ordenar Asc o Desc</li></ol>
+     <table id="tabla" border="1">
+	 <thead>
+	 <tr><th>id</th><th>foto</th><th>video</th><th  id="price">precio</th>
+	 <th>titulo</th><th>descricion</th><th>categoria</th></tr>
+	 </thead>
+	 <tbody id="tbody"></tbody>
+	 </table>
+	 </form>
+	 </div>
+	
+     
+</body>
+</html>

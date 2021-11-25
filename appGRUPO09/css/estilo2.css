@@ -11,3 +11,12 @@ input#c3:checked ~ table tbody tr.c3 { display: table-row; }
 input#c3:not(checked) ~ table tbody tr.c3 { display: none; }
 input#c4:checked ~ table tbody tr.c4 { display: table-row; }
 input#c4:not(checked) ~ table tbody tr.c4 { display: none; }
+
+.btnSubir {
+    position: fixed;
+    bottom: 20px;
+    right: -100px;
+    width: 65px !important;
+    height: 65px !important;
+    transition: all 1s;
+}

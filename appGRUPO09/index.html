@@ -2,17 +2,36 @@
 <html lang="es">
 
 <head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no ,initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 	<title>GRUPO09PARCIAL2TPI</title>
 	<meta charset="utf-8"  />
-<LINK REL=StyleSheet HREF="css/estilo.css" TYPE="text/css" MEDIA=screen>
-<script src="js/codigo.js"></script>
-
+	<link rel="stylesheet" type="text/css" href="css/estilo2.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<script src="js/codigo.js"></script>
+	<script src="js/jquery-3.5.1.min.js"></script>
+	<script src="js/menuscroll-tooltip2.js"></script>
+	<script src="js/bootstrap.bundle.min.js"></script>
 </head>
 
 <body onload="obtenerProductos();">
+ <a href="#" id="inicio" style="visibility: hidden;"></a>
  <h1>Parcial 2 Grupo 09</h1>
      <p>… Sus datos personales aquí …</p>
-	 <p><button id="inventario" onclick="obtenerProductos();this.style.display='none';">Obtener Productos</button> </p>
+     <div>
+	 	<form>
+	 		Id: <input id="id" type="text"><br><br>
+	 		Url de foto: <input id="foto" type="text"><br><br>
+	 		Url (embebida) de video de youtube: <input id="video" type="text" data-toggle="tooltip" data-placement="bottom" data-html="true" title="Ingrese a un video de youtube y presione la opcion compartir, insertar y luego copie la url embebida situada en la etiqueta src del iframe"><br><br>
+	 		Precio: <input id="precio" type="text"><br><br>
+	 		Titulo: <input id="titulo" type="text"><br><br>
+	 		Descripcion: <input id="descripcion" type="text"><br><br>
+	 		Categoria: <input id="categoria" type="text"><br><br>
+	 	</form>
+	 </div>
+	 <p><button onclick="crear();" this.style.display='none'>Crear Producto</button></p>
+	 <p><button onclick="actualizarProducto();" this.style.display='none'>Actualizar Producto</button></p>
+	 <p><button id="inventario" onclick="obtenerProductos();" this.style.display='none'>Obtener Productos</button> </p>
 	 <div id="listado" style="display:none;">
 	 <form name="filtroprods" id="filtroprods">
 	   Seleccione Categorias 
@@ -32,6 +51,6 @@
 	 </form>
 	 </div>
 	
-     
+     <a href="#inicio"><img src="img/subir.png" alt="Subir" class="btnSubir" id="btnSubir"></a>
 </body>
 </html>

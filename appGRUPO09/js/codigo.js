@@ -35,6 +35,42 @@ switch(codigo) {
 		 				 
 }
 
+function crear() {
+	var id=document.getElementById("id");
+	var foto=document.getElementById("foto");
+	var video=document.getElementById("video");
+	var precio=document.getElementById("precio");
+	var titulo=document.getElementById("titulo");
+	var descripcion=document.getElementById("descripcion");
+	var categoria=document.getElementById("categoria");
+	const datos = {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ id:id.value, image:foto.value, video:video.value, price:precio.value, title:titulo.value, category:categoria.value, description:descripcion.value  })
+	};
+
+	fetch('http://localhost:3000/productos/', datos);
+	obtenerProductos();
+}
+
+function actualizarProducto() {
+	var id=document.getElementById("id");
+	var foto=document.getElementById("foto");
+	var video=document.getElementById("video");
+	var precio=document.getElementById("precio");
+	var titulo=document.getElementById("titulo");
+	var descripcion=document.getElementById("descripcion");
+	var categoria=document.getElementById("categoria");
+
+	const requestOptions = {
+	    method: 'PUT',
+	    headers: { 'Content-Type': 'application/json' },
+	    body: JSON.stringify({ id:id.value, image:foto.value, video:video.value, price:precio.value, title:titulo.value, category:categoria.value, description:descripcion.value })
+	};
+	fetch('http://localhost:3000/productos/'+id.value, requestOptions);	
+	obtenerProductos(); 				 
+}
+
 
   function codigoCat(catstr) {
 	var code="null";
@@ -64,7 +100,8 @@ switch(codigo) {
 	  titles=document.getElementsByClassName("title");
 	  descriptions=document.getElementsByClassName("description");
 	  categories=document.getElementsByClassName("category");   
-	  fotos=document.getElementsByClassName("foto");   
+	  fotos=document.getElementsByClassName("foto"); 
+	  videos=document.getElementsByClassName("video");    
 	  prices=document.getElementsByClassName("price");   
 	  if(orden===0) {orden=-1;precio.innerHTML="Precio"}
 	  else
@@ -85,6 +122,7 @@ switch(codigo) {
 		tr.setAttribute("class",catcode);
 		prices[nfila].innerHTML="$"+productos[nfila].price;
 		fotos[nfila].innerHTML="<img src='"+productos[nfila].image+"'>";
+		videos[nfila].innerHTML="<iframe width='260' height='150' src='"+productos[nfila].video+"'"+" title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>";
 		fotos[nfila].firstChild.setAttribute("onclick","window.open('"+productos[nfila].image+"');" );
 		}
 	}

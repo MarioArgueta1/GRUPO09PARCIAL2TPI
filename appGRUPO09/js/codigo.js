@@ -68,7 +68,7 @@ function actualizarProducto() {
 	    body: JSON.stringify({ id:id.value, image:foto.value, video:video.value, price:precio.value, title:titulo.value, category:categoria.value, description:descripcion.value })
 	};
 	fetch('http://localhost:3000/productos/'+id.value, requestOptions);	
-	obtenerProductos(); 				 
+	obtenerProductos();				 
 }
 
 
@@ -124,9 +124,37 @@ function actualizarProducto() {
 		fotos[nfila].innerHTML="<img src='"+productos[nfila].image+"'>";
 		videos[nfila].innerHTML="<iframe width='260' height='150' src='"+productos[nfila].video+"'"+" title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>";
 		fotos[nfila].firstChild.setAttribute("onclick","window.open('"+productos[nfila].image+"');" );
+		ids[nfila].setAttribute("onclick","datosActualizar('"+productos[nfila].id+"'"+","+"'"+productos[nfila].image+"'"+","+"'"+productos[nfila].video+"'"+","+"'"+productos[nfila].price+"'"+","+"'"+productos[nfila].title+"'"+","+"'"+productos[nfila].description+"'"+","+"'"+productos[nfila].category+"'"+");" );
 		}
 	}
 
+function datosActualizar(id,urlfoto,urlvideo,precio,titulo,descripcion,categoria) {
+  var table = document.getElementById("tabla");
+  var rows = table.getElementsByTagName("tr");
+  for (i = 0; i < rows.length; i++) {
+    var currentRow = table.rows[i];
+    var createClickHandler = function(row) {
+      return function() {
+		var Id=document.getElementById("id");
+		var UrlFoto=document.getElementById("foto");
+		var UrlVideo=document.getElementById("video");
+		var Precio=document.getElementById("precio");
+		var Titulo=document.getElementById("titulo");
+		var Descripcion=document.getElementById("descripcion");
+		var Categoria=document.getElementById("categoria");
+
+		Id.value = id;
+		UrlFoto.value = urlfoto;
+		UrlVideo.value = urlvideo;
+		Precio.value = precio;
+		Titulo.value = titulo;
+		Descripcion.value = descripcion;
+		Categoria.value = categoria;
+      };
+    };
+    currentRow.onclick = createClickHandler(currentRow);
+  }
+}
 
 function ordenarDesc(p_array_json, p_key) {
    p_array_json.sort(function (a, b) {

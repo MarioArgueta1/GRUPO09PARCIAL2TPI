@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, user-scalable=no ,initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 	<title>GRUPO09PARCIAL2TPI</title>
 	<meta charset="utf-8"  />
-	<link rel="stylesheet" type="text/css" href="css/estilo2.css">
+	<link rel="stylesheet" type="text/css" href="css/estilo3.css">
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 	<script src="js/codigo.js"></script>
 	<script src="js/jquery-3.5.1.min.js"></script>
@@ -25,7 +25,10 @@
 	 		Url (embebida) de video de youtube: <input id="video" type="text" data-toggle="tooltip" data-placement="bottom" data-html="true" title="Ingrese a un video de youtube y presione la opcion compartir, insertar y luego copie la url embebida situada en la etiqueta src del iframe"><br><br>
 	 		Precio: <input id="precio" type="text"><br><br>
 	 		Titulo: <input id="titulo" type="text"><br><br>
-	 		Descripcion: <input id="descripcion" type="text"><br><br>
+	 		<p class="campo">
+		 		<label for="descripcion">Descripcion: </label>
+		 		<textarea id="descripcion" type="text" rows="6" cols="100"></textarea><br><br>
+	 		</p>
 	 		Categoria: <input id="categoria" type="text"><br><br>
 	 	</form>
 	 </div>
@@ -40,7 +43,8 @@
    <input type="checkbox" id="c3" value="c3" checked>Motoneta
    <input type="checkbox" id="c4" value="c4" checked>Motocarro
    <ol><li>Click en la imagen para Acercamiento</li>
-   <li>Click en precio para ordenar Asc o Desc</li></ol>
+   <li>Click en precio para ordenar Asc o Desc</li>
+	<li>De click en una celda de id para obtener los datos del producto en el formulario, para actualizar un producto mas facilmente</li></ol>
      <table id="tabla" border="1">
 	 <thead>
 	 <tr><th>id</th><th>foto</th><th>video</th><th  id="price">precio</th>

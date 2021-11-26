@@ -20,3 +20,7 @@ input#c4:not(checked) ~ table tbody tr.c4 { display: none; }
     height: 65px !important;
     transition: all 1s;
 }
+
+.campo * {
+  vertical-align: middle;
+}

@@ -29,12 +29,18 @@
 		 		<label for="descripcion">Descripcion: </label>
 		 		<textarea id="descripcion" type="text" rows="6" cols="100"></textarea><br><br>
 	 		</p>
-	 		Categoria: <input id="categoria" type="text"><br><br>
+	 		Categoria: <select id="categoria">
+				<option value="Deportiva">Deportiva</option>
+				<option value="Minimoto">Minimoto</option>
+				<option value="Motoneta">Motoneta</option>
+				<option value="Motocarro">Motocarro</option>
+			 </select><br><br>
 	 	</form>
 	 </div>
 	 <p><button onclick="crear();" this.style.display='none'>Crear Producto</button></p>
 	 <p><button onclick="actualizarProducto();" this.style.display='none'>Actualizar Producto</button></p>
 	 <p><button id="inventario" onclick="obtenerProductos();" this.style.display='none'>Obtener Productos</button> </p>
+	 <p><button onclick="filtrarProductos();" this.style.display='none'>Filtrar</button></p>
 	 <div id="listado" style="display:none;">
 	 <form name="filtroprods" id="filtroprods">
 	   Seleccione Categorias 
@@ -42,13 +48,21 @@
 	 <input type="checkbox" id="c2" value="c2" checked>Minimoto
    <input type="checkbox" id="c3" value="c3" checked>Motoneta
    <input type="checkbox" id="c4" value="c4" checked>Motocarro
+   <br>
+   Precio a filtrar: 
+   <input id="preciofiltro" type="number" step="0.01" min="0" value="0">
+   <select id="criteriofiltro">
+	   <option value="0">Filtro sin aplicar</option>
+	   <option value="1">Mayor que</option>
+	   <option value="2">Menor que</option>
+   </select>
    <ol><li>Click en la imagen para Acercamiento</li>
    <li>Click en precio para ordenar Asc o Desc</li>
 	<li>De click en una celda de id para obtener los datos del producto en el formulario, para actualizar un producto mas facilmente</li></ol>
      <table id="tabla" border="1">
 	 <thead>
 	 <tr><th>id</th><th>foto</th><th>video</th><th  id="price">precio</th>
-	 <th>titulo</th><th>descricion</th><th>categoria</th></tr>
+	 <th>titulo</th><th>descripcion</th><th>categoria</th></tr>
 	 </thead>
 	 <tbody id="tbody"></tbody>
 	 </table>

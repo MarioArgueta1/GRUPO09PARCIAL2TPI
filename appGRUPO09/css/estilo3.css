@@ -1,16 +1,65 @@
-img {width:3cm;height:3cm;}
-table {width:80%;margin:auto;}
+body{background: rgb(74, 180, 180);
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: bold;
+  font-size: large;
+}
+
+#categoria{
+background: rgb(253, 187, 187);
+  font-size: large;
+  font-family: 'Times New Roman', Times, serif;
+  border-radius: 6px;
+font-weight: bold;
+border: 2px solid rgb(248, 135, 135);
+}
+#categoria:hover {
+  background-color: rgb(248, 135, 135);
+  background-image: -webkit-linear-gradient(top, #2079b0);
+  text-decoration: none;
+}
+
+img {width:4cm;
+  height:4cm;}
+
+
+table {width:80%;
+  margin:auto; 
+  background-color:lightgrey;
+  border: 1px solid #000;
+  text-align: center;
+  border-radius: 6px;
+  font-weight: normal;
+}
+
+th{
+  width: 25%;
+  text-align: center;
+  vertical-align: top;
+  border: 1px solid #000;
+}
 th#price {cursor:pointer;}
-li {color:blue;}
+
+li {color: blue;}
+ol{
+  font-weight: bold; 
+}
+
 /*si chequea muestra los productos sin cheque desaparecen los productos*/
-input#c1:checked ~ table tbody tr.c1 { display: table-row; }
-input#c1:not(checked) ~ table tbody tr.c1 { display: none; }
-input#c2:checked ~ table tbody tr.c2 { display: table-row; }
-input#c2:not(checked) ~ table tbody tr.c2 { display: none; }
-input#c3:checked ~ table tbody tr.c3 { display: table-row; }
-input#c3:not(checked) ~ table tbody tr.c3 { display: none; }
-input#c4:checked ~ table tbody tr.c4 { display: table-row; }
-input#c4:not(checked) ~ table tbody tr.c4 { display: none; }
+input#c1:checked ~ table tbody tr.c1 { display: table-row;}
+input#c1:not(checked) ~ table tbody tr.c1 { display: none;}
+input#c2:checked ~ table tbody tr.c2 { display: table-row;}
+input#c2:not(checked) ~ table tbody tr.c2 { display: none;}
+input#c3:checked ~ table tbody tr.c3 { display: table-row;}
+input#c3:not(checked) ~ table tbody tr.c3 { display: none;}
+input#c4:checked ~ table tbody tr.c4 { display: table-row;}
+input#c4:not(checked) ~ table tbody tr.c4 { display: none;}
+
+#filtroprods {
+  
+  background: rgb(228, 199, 167);
+  font-size: large;
+  border-radius: 6px;
+}
 
 .btnSubir {
     position: fixed;
@@ -23,4 +72,75 @@ input#c4:not(checked) ~ table tbody tr.c4 { display: none; }
 
 .campo * {
   vertical-align: middle;
+  
+}
+
+
+input#id{
+  background-color: white;
+  border-radius: 6px;
+  border: 2px solid black;
+  font-size: large;
+}
+input#foto{
+  background-color: white;
+  border-radius: 6px;
+  border: 2px solid black;
+  font-size: large;
+}
+input#video{
+  background-color: white;
+  border-radius: 6px;
+  border: 2px solid black;
+  font-size: large;
+}
+input#precio{
+  background-color: white;
+  border-radius: 6px;
+  border: 2px solid black;
+  font-size: large;
+}
+input#titulo{
+  background-color: white;
+  border-radius: 6px;
+  border: 2px solid black;
+  font-size: large;
+  
+}
+textarea#descripcion{
+  background-color: white;
+  border-radius: 6px;
+  border: 2px solid black;
+  font-size: large;
+}
+input#id:hover,input#foto:hover,input#video:hover,input#precio:hover,input#titulo:hover,#textarea#descripcion:hover{
+  background-color: lightgrey
+    }
+#preciofiltro, #criteriofiltro{
+      background: rgb(253, 187, 187);
+      font-size: large;
+      font-family: 'Times New Roman', Times, serif;
+      border-radius: 6px;
+      font-weight: normal;
+      text-align: center;
+    }
+#preciofiltro:hover,#criteriofiltro:hover {
+  background-color: rgb(248, 135, 135);
+  background-image: -webkit-linear-gradient(top, #2079b0);
+  text-decoration: none;
+}
+
+#crear, #actualizar,#inventario, #filtrar{
+  color: black;
+  background: rgb(253, 187, 187);
+  border: 2px solid rgb(248, 135, 135);
+  border-radius: 6px;
+  font-size: large;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: bold;
+
+}
+
+#crear:hover, #actualizar:hover,#inventario:hover, #filtrar:hover{
+  background-color: rgb(248, 135, 135);
 }

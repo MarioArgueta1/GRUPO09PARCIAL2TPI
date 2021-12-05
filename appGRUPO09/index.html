@@ -37,10 +37,11 @@
 			 </select><br><br>
 	 	</form>
 	 </div>
-	 <p><button onclick="crear();" this.style.display='none'>Crear Producto</button></p>
-	 <p><button onclick="actualizarProducto();" this.style.display='none'>Actualizar Producto</button></p>
+	 <p><button id="crear" onclick="crear();" this.style.display='none'>Crear Producto</button></p>
+	 <p><button id="actualizar" onclick="actualizarProducto();" this.style.display='none'>Actualizar Producto</button></p>
 	 <p><button id="inventario" onclick="obtenerProductos();" this.style.display='none'>Obtener Productos</button> </p>
-	 <p><button onclick="filtrarProductos();" this.style.display='none'>Filtrar</button></p>
+	 <p><button id="filtrar" onclick="filtrarProductos();" this.style.display='none'>Filtrar</button></p>
+
 	 <div id="listado" style="display:none;">
 	 <form name="filtroprods" id="filtroprods">
 	   Seleccione Categorias 

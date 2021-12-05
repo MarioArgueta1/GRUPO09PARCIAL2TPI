@@ -133,7 +133,7 @@ textarea#descripcion:hover{
   text-decoration: none;
 }
 
-#crear, #actualizar,#inventario, #filtrar{
+#crear, #actualizar,#inventario, #filtrar, #borrar{
   color: black;
   background: rgb(253, 187, 187);
   border: 2px solid rgb(248, 135, 135);
@@ -144,6 +144,6 @@ textarea#descripcion:hover{
 
 }
 
-#crear:hover, #actualizar:hover,#inventario:hover, #filtrar:hover{
+#crear:hover, #actualizar:hover,#inventario:hover, #filtrar:hover, #borrar:hover{
   background-color: rgb(248, 135, 135);
 }

@@ -1,7 +1,7 @@
 var fila="<tr><td class='id'></td><td class='foto'></td><td class='video'></td><td class='price'></td><td class='title'></td><td class='description'></td><td class='category'></td></tr>";
 var productos=null;
 function crearBoton(id){
-	var boton="<button class='x' onclick='borrarProducto("+id+");'>Borrar</button>";
+	var boton="<button class='x' id='borrar' onclick='borrarProducto("+id+");'>Borrar</button>";
     return boton;
 }
 

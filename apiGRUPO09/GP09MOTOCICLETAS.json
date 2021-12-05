@@ -28,15 +28,6 @@
       "description": "Motocicleta de gran velocidad"
     },
     {
-      "id": 4,
-      "image": "https://fakestoreapi.com/img/71pWzhdJNwL._AC_UL640_QL65_ML3_.jpg",
-      "video": "https://www.youtube.com/embed/7C2cQZH3dx0",
-      "price": "800",
-      "title": "Moto barata",
-      "category": "Deportiva",
-      "description": "Calidad precio"
-    },
-    {
       "id": "2",
       "image": "https://www.aboutespanol.com/thmb/6SXMj1vB_Bmg62qJpcjSW51VlbE=/1253x1253/smart/filters:no_upscale()/KawasakiNinja-ec7fdb376a5e471ebcc844b5cb2f7594.jpeg",
       "video": "https://www.youtube.com/embed/7C2cQZH3dx0",

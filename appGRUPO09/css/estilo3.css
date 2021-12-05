@@ -113,9 +113,12 @@ textarea#descripcion{
   border: 2px solid black;
   font-size: large;
 }
-input#id:hover,input#foto:hover,input#video:hover,input#precio:hover,input#titulo:hover,#textarea#descripcion:hover{
-  background-color: lightgrey
+input#id:hover,input#foto:hover,input#video:hover,input#precio:hover,input#titulo:hover{
+  background-color: lightgrey;
     }
+textarea#descripcion:hover{
+  background-color: lightgrey;
+}
 #preciofiltro, #criteriofiltro{
       background: rgb(253, 187, 187);
       font-size: large;
